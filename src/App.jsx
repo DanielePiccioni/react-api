@@ -31,10 +31,10 @@ function App() {
                 <img src={attore.image} alt={attore.name} className="card-img-top immagine-attore" />
                 <div className="card-body">
                   <h5 className="card-title">{attore.name}</h5>
-                  <p className="card-text mb-1">Anno di nascita: {attore.birth_year}</p>
-                  <p className="card-text mb-1">Nazionalità: {attore.nationality}</p>
-                  <p className="card-text mb-1">Riconoscimenti: {attore.awards}</p>
-                  <p className="card-text">Biografia: {attore.biography}</p>
+                  <p className="card-text mb-1"><strong>Anno di nascita:</strong> {attore.birth_year}</p>
+                  <p className="card-text mb-1"><strong>Nazionalità:</strong> {attore.nationality}</p>
+                  <p className="card-text mb-1"><strong>Riconoscimenti:</strong> {attore.awards}</p>
+                  <p className="card-text"><strong>Biografia:</strong> {attore.biography}</p>
                 </div>
               </div>
             </div>
