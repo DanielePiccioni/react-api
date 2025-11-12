@@ -22,20 +22,24 @@ function App() {
   }, []);
   return (
     <>
-      <h1>meowattori</h1>
-
-      <div>
-        {attori.map((attore) => (
-          <div key={attore.id}>
-            <img src={attore.image} alt={attore.name} />
-            <h2>{attore.name}</h2>
-            <p>Anno di nascita: {attore.birth_year}</p>
-            <p>Nazionalità: {attore.nationality}</p>
-            <p>Biografia: {attore.bio}</p>
-            <p>Riconoscimenti: {attore.awards}</p>
-            <p>{attore.bio}</p>
-          </div>
-        ))}
+      <div className="container my-4">
+        <h1 className="text-center mb-4">meowattori</h1>
+        <div className="row">
+          {attori.map((attore) => (
+            <div key={attore.id} className="col-12 col-lg-3 mb-4">
+              <div className="card h-100">
+                <img src={attore.image} alt={attore.name} className="card-img-top immagine-attore" />
+                <div className="card-body">
+                  <h5 className="card-title">{attore.name}</h5>
+                  <p className="card-text mb-1">Anno di nascita: {attore.birth_year}</p>
+                  <p className="card-text mb-1">Nazionalità: {attore.nationality}</p>
+                  <p className="card-text mb-1">Riconoscimenti: {attore.awards}</p>
+                  <p className="card-text">Biografia: {attore.biography}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   )
