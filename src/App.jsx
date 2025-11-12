@@ -23,6 +23,19 @@ function App() {
   return (
     <>
       <h1>meowattori</h1>
+
+      <div>
+        {attori.map((attore) => (
+          <div key={attore.id}>
+            <img src={attore.image} alt={attore.name} />
+            <h2>{attore.name}</h2>
+            <p>Anno di nascita: {attore.birth_year}</p>
+            <p>Nazionalità: {attore.nationality}</p>
+            <p>Riconoscimenti: {attore.awards}</p>
+            <p>{attore.bio}</p>
+          </div>
+        ))}
+      </div>
     </>
   )
 }
