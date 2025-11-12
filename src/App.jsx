@@ -31,6 +31,7 @@ function App() {
             <h2>{attore.name}</h2>
             <p>Anno di nascita: {attore.birth_year}</p>
             <p>Nazionalità: {attore.nationality}</p>
+            <p>Biografia: {attore.bio}</p>
             <p>Riconoscimenti: {attore.awards}</p>
             <p>{attore.bio}</p>
           </div>
