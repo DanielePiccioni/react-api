@@ -1,0 +1,24 @@
+export default function AttoriList() {
+
+    return (
+        <div className="container my-4">
+            <h1 className="text-center mb-4">meowattori</h1>
+            <div className="row">
+                {attori.map((attore) => (
+                    <div key={attore.id} className="col-12 col-lg-3 mb-4">
+                        <div className="card h-100">
+                            <img src={attore.image} alt={attore.name} className="card-img-top immagine-attore" />
+                            <div className="card-body">
+                                <h5 className="card-title">{attore.name}</h5>
+                                <p className="card-text mb-1"><strong>Anno di nascita:</strong> {attore.birth_year}</p>
+                                <p className="card-text mb-1"><strong>Nazionalità:</strong> {attore.nationality}</p>
+                                <p className="card-text mb-1"><strong>Riconoscimenti:</strong> {attore.awards}</p>
+                                <p className="card-text"><strong>Biografia:</strong> {attore.biography}</p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    )
+}
